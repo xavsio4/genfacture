@@ -1,7 +1,9 @@
 # genfacture
 Simple page to generate invoices in pdf format. It can be used offline and uses Angular and jPdf
 
-The source code is not very lean but it does the trick. It is a proof of concept for a larger project where generating invoices is a feature. 
+The source code is not very lean but it does the trick. It is a proof of concept for a larger project where generating invoices is a feature.
+
+Just create a folder under your web server un copy the files in it. No database is used. There is a counter stored in a file. 
 
 ##TODOS
 Clean the code
