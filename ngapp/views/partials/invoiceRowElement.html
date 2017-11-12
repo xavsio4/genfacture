@@ -1,0 +1,51 @@
+
+	<!-- INVOICE ROW ELEMENT-->
+	<div class="invoice_row_element">
+		<table class="table">
+			<tr>
+
+			<td>
+			<label>name/ref</label>
+			<input class="form-control input-small" type="text" name="MyInvoiceRows_name[]" size="5" id="MyInvoiceRows[name][]" placeholder="ref"/> 
+			</td>
+
+			<td>
+			<label>Quantity</label>
+			<input min="0" ng-model="quantity" class="form-control input-small" type="number" name="MyInvoiceRows_name[]" size="5" id="MyInvoiceRows[name][]" placeholder="ref"/>
+			</td>
+
+			<td>
+			<label>Unit price</label>
+			<input min="0" ng-model="price" class="form-control input-small" type="number" name="MyInvoiceRows_name[]" size="5" id="MyInvoiceRows[name][]" placeholder="ref"/>
+			</td>
+
+			<td>
+			<label>Tax</label>
+			<select class="form-control">
+
+			</select>
+			</td>
+
+			<td>
+			<span id="htva" class="calculated_row"><strong> {{quantity * price }}</strong> € htva</span>
+			</td>
+
+			<td>
+			<span id="tvac" class="calculated_row"><strong> {{quantity * price }}</strong> € itva</span>
+			</td>
+
+			<td>
+			<a id="delete" href="#"><i class="fa fa-trash-o"></i></a>
+			<a id="move" href="#"><i class="fa fa-arrows"></i></a>
+			<a id="edit" href="#"><i class="fa fa-pencil"></i></a>
+			</td>
+			</tr>
+			<tr>
+				<td colspan="6">
+				<label>Description</label>
+				<input class="form-control input-small" type="text" name="MyInvoiceRows_name[]" id="MyInvoiceRows[name][]" placeholder="Description"/>
+				</td>
+				<td><button class="btn btn-blue pull-right">Add item</button></td>
+			</tr>
+		</table>
+	</div><!-- //INVOICE ROW ELEMENT -->

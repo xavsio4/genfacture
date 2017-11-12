@@ -1,0 +1,24 @@
+
+	<!-- INVOICE ROW ELEMENT-->
+
+			<td>
+			{{row.itemName}}
+			</td>
+
+			<td>{{row.quantity}}</td>
+
+			<td>{{row.price}}</td>
+
+			<td>{{(row.tax)*100}} %</td>
+
+			<td class="calculatedView"><span id="htva" class="bypassme"><strong> {{(row.quantity * row.price) | number:2 }}</strong> € </span></td>
+
+			<td class="calculatedView">
+			<span id="tvac" class="bypassme"><strong> {{ (row.quantity * row.price) + ((row.quantity * row.price)* row.tax ) | number:2 }} </strong> € </span>
+			</td>
+			<!-- </tr>
+			<tr>
+				<td colspan="6">
+				<label>Description</label>
+				{{row.description}}
+				</td> -->

@@ -1,0 +1,80 @@
+
+	<!-- INVOICE ROW ELEMENT-->
+	<div class="invoice_row_element" ng-init="" class="scope" id="invr_{{row.id}}">
+		<table class="table">
+		<thead><th>Item</th><th>Quantity</th><th>Price</th><th>Tax</th><th>Net</th><th>gross</th><th><a sortable-item-handle id="move" href="#"><i class="fa fa-arrows"></i></a></th></thead>
+			<tr>
+
+			<td>
+			
+			<input ng-model="row.itemName" class="form-control input-small" type="text" name="MyInvoiceRows_name[]" size="5" id="MyInvoiceRows[itemName][]" placeholder="itemName" value="{{row.itemName}}" required /> 
+			</td>
+
+			<td>
+			
+			<input numbers-only="numbers-only" ng-model="row.quantity" step="any" class="form-control input-small" type="text" name="MyInvoiceRows[quantity][]" size="5" id="MyInvoiceRows_quantity" placeholder="0.00" value="{{row.quantity}}" />
+			</td>
+
+			<td>
+			
+			<input numbers-only="numbers-only" ng-model="row.price"  class="form-control input-small" type="text" name="MyInvoiceRows[price][]" size="5" id="MyInvoiceRows_price" size="5"   placeholder="0.00" value="{{row.price}}" />
+			</td>
+
+			<td>
+			
+			<select ng-model="row.tax" class="form-control">
+				<option value="0" selected> 0% </option>
+
+				<option value="0.021">2.1%</option>	
+				<option value="0.03">3%</option>
+				<option value="0.04">4%</option>
+				<option value="0.048">4.8%</option>
+				<option value="0.05">5%</option>
+				<option value="0.055">5.5%</option>
+				<option value="0.06">6%</option>
+				<option value="0.07">7%</option>
+				<option value="0.08">8%</option>
+				<option value="0.09">9%</option>
+				<option value="0.095">9.5%</option>
+				<option value="0.10">10%</option>
+				<option value="0.12">12%</option>
+				<option value="0.13">13%</option>
+				<option value="0.135">13.5%</option>
+				<option value="0.14">14%</option>
+				<option value="0.15">15%</option>
+				<option value="0.17">17%</option>
+				<option value="0.18">18%</option>
+				<option value="0.19">19%</option>
+				<option value="0.20">20%</option>
+				<option value="0.21">21%</option>
+				<option value="0.22">22%</option>
+				<option value="0.23">23%</option>
+				<option value="0.24">24%</option>
+				<option value="0.25">25%</option>
+				<option value="0.27">27%</option>
+
+			</select>
+			</td>
+
+			<td class="calculated">
+			<span id="htva" ><strong> {{(row.quantity * row.price) | number:2 }}</strong> € htva</span>
+			</td>
+
+			<td class="calculated">
+			<span id="tvac" ><strong> {{ (row.quantity * row.price) + ((row.quantity * row.price)* row.tax ) | number:2 }} </strong> € itva</span>
+			</td>
+
+			<td class="invactions">
+			<a id="delete" href="#" ng-really-click="deleteInvoiceRow($index)" ng-really-message="Are you sure?"><i class="fa fa-trash-o"></i></a>
+			</td>
+			</tr>
+			<!--<tr>
+				<td colspan="7">
+				<label>Description</label>
+				<textarea class="form-control" name="MyInvoiceRows_name[]" id="MyInvoiceRows[name][]" placeholder="Description" />{{description}}
+				</textarea>
+				</td>
+				
+			</tr>-->
+		</table>
+	</div><!-- //INVOICE ROW ELEMENT -->
