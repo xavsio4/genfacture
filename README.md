@@ -5,12 +5,12 @@ The source code is not very lean but it does the trick. It is a proof of concept
 
 Just create a folder under your web server un copy the files in it. No database is used. There is a counter stored in a file. 
 
-##TODOS
+## TODOS
 Clean the code
 Improve the invoice appearance
 
-##Credits
--Bootsrap3 theme Stanley : http://blacktie.co/2014/01/stanley-freelancer-theme/
--jsPDF jquery component
--Angular
+## Credits
+- Bootsrap3 theme Stanley : http://blacktie.co/2014/01/stanley-freelancer-theme/
+- jsPDF jquery component
+- Angular
 
